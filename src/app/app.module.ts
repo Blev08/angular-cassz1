@@ -28,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { GenericDataService } from './services/generic-data.service';
 import { GenericFormComponent } from './components/generic-form/generic-form.component';
+import { GenericModalComponent } from './components/modals/generic-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export function initConfig(config: AppConfigService) {
   return () => config.load();
@@ -39,6 +41,7 @@ export function initConfig(config: AppConfigService) {
     GenericProjectComponent,
     ToolbarComponent,
     GenericFormComponent,
+    GenericModalComponent
   ],
   imports: [
     BrowserModule,
@@ -59,6 +62,7 @@ export function initConfig(config: AppConfigService) {
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
+    MatDialogModule
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -75,5 +79,8 @@ export function initConfig(config: AppConfigService) {
     ThemeChangeObservable,
     SendGridCommandObservable,
   ],
+  entryComponents: [
+    GenericModalComponent
+  ]
 })
 export class AppModule {}
