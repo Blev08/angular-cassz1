@@ -1,0 +1,29 @@
+<mat-toolbar class="main-toolbar d-flex justify-content-between pl-0" color="primary">
+	<div class="d-flex justify-content-start">
+		<div class="pl-2 align-bottom toolbar-title">
+			<span>{{appDisplayName}}</span>
+		</div>
+	</div>
+	<div class="d-flex justify-content-end">
+		<button mat-icon-button (click)="accountButtonClicked()">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+		<div class="menu-style">
+			<button mat-icon-button [matMenuTriggerFor]="optionsMenu">
+        <mat-icon>menu</mat-icon>
+      </button>
+			<mat-menu #optionsMenu="matMenu" class="theme-background">
+				<button mat-menu-item [matMenuTriggerFor]="theme">Theme</button>
+        <button mat-menu-item [matMenuTriggerFor]="gridOptions">Grid Options</button>
+			</mat-menu>
+			<mat-menu #theme="matMenu" class="theme-background">
+				<button mat-menu-item (click)="$event.stopPropagation(); switchTheme('light-theme')">Light</button>
+				<button mat-menu-item (click)="$event.stopPropagation(); switchTheme('dark-theme')">Dark</button>
+			</mat-menu>
+      <mat-menu #gridOptions="matMenu" class="theme-background">
+				<button mat-menu-item (click)="sendGridOption('fillUp')">Fill Up</button>
+				<button mat-menu-item (click)="sendGridOption('fullDown')">Fill Down</button>
+			</mat-menu>
+		</div>
+	</div>
+</mat-toolbar>

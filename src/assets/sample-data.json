@@ -1,0 +1,81 @@
+[
+  {
+    "_id": 1,
+    "name": "Object1",
+    "description": "Object1",
+    "location": "USA",
+    "importance": "Minimial",
+    "subObjects": [
+      {
+        "_id": 1,
+        "name": "Subobject1",
+        "description": "Subobject1",
+        "preference": "None",
+        "objectId": 1,
+        "states": [
+          {
+            "_id": 1,
+            "state": "PA",
+            "priority": 0,
+            "objectId": 1,
+            "subObjectId": 1
+          },
+          {
+            "_id": 2,
+            "state": "VA",
+            "priority": 1,
+            "objectId": 1,
+            "subObjectId": 1
+          }
+        ]
+      },
+      {
+        "_id": 2,
+        "name": "Subobject2",
+        "description": "Subobject2",
+        "preference": "None",
+        "objectId": 1,
+        "states": [
+          {
+            "_id": 3,
+            "state": "CA",
+            "priority": 0,
+            "objectId": 1,
+            "subObjectId": 2
+          },
+          {
+            "_id": 4,
+            "state": "NC",
+            "priority": 1,
+            "objectId": 1,
+            "subObjectId": 2
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": 2,
+    "name": "Object2",
+    "description": "Object2",
+    "location": "MEX",
+    "importance": "Minimial",
+    "subObjects": []
+  },
+  {
+    "_id": 3,
+    "name": "Object3",
+    "description": "Object3",
+    "location": "CAN",
+    "importance": "Medium",
+    "subObjects": []
+  },
+  {
+    "_id": 4,
+    "name": "Object4",
+    "description": "Object4",
+    "location": "AUS",
+    "importance": "Max",
+    "subObjects": []
+  }
+]

@@ -1,0 +1,33 @@
+.main-toolbar{
+  height: 40px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+}
+
+.collapse-arrow {
+  font-size: .5rem
+}
+
+.toolbar-title {
+  line-height: 40px;
+}
+
+.menu-style {
+  cursor: pointer;
+}
+
+.font-small {
+  font-size: .8rem;
+}
+
+.mat-divider-vertical {
+  border-right-color: white;
+}
+
+.mat-divider .mat-divider-vertical{
+  border-top: 0;
+  border-right-width: 2px;
+  border-right-style: solid;
+  height: 25px;
+  margin-top: 8px;
+}

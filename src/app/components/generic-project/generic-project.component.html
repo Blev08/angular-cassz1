@@ -1,0 +1,32 @@
+<div>
+	<igx-hierarchical-grid #gridView igxForOf [data]="data" [autoGenerate]="false" [rowSelection]="'multiple'"
+		[primaryKey]="'_id'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
+		emptyGridMessage="No Objects Available." (onCellEdit)="editDone($event, 'object')" [displayDensity]="'compact'">
+		<igx-column field="name" header="Name" [width]="'300px'" [editable]="true" [resizable]="true" [sortable]="true"
+			[filterable]="true" [cellStyles]="objectStyles"></igx-column>
+		<igx-column field="description" header="Description" [width]="'300px'" [editable]="true" [resizable]="true"
+			[sortable]="true" [filterable]="true" [cellStyles]="objectStyles"></igx-column>
+		<igx-column field="location" header="Location" [width]="'300px'" [editable]="true" [resizable]="true"
+			[sortable]="true" [filterable]="true" [cellStyles]="objectStyles"></igx-column>
+		<igx-column field="importance" header="Importance" [width]="'300px'" [editable]="true" [resizable]="true"
+			[sortable]="true" [filterable]="true" [cellStyles]="objectStyles"></igx-column>
+		<igx-row-island #subObjectView [key]="'subObjects'" [autoGenerate]="false" [rowSelection]="'multiple'"
+			[primaryKey]="'_id'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
+			emptyGridMessage="No Sub-Objects Available." (onCellEdit)="editDone($event, 'subObject')">
+			<igx-column field="name" header="Name" [width]="'300px'" [editable]="true" [resizable]="true"
+				[sortable]="true" [filterable]="true" [cellStyles]="subobjectStyles"></igx-column>
+			<igx-column field="description" header="Description" [width]="'300px'" [editable]="true" [resizable]="true"
+				[sortable]="true" [filterable]="true" [cellStyles]="subobjectStyles"></igx-column>
+			<igx-column field="preference" header="Preference" [width]="'300px'" [editable]="true" [resizable]="true"
+				[sortable]="true" [filterable]="true" [cellStyles]="subobjectStyles"></igx-column>
+			<igx-row-island #subObjectView [key]="'states'" [autoGenerate]="false" [rowSelection]="'multiple'"
+				[primaryKey]="'_id'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
+				emptyGridMessage="No States Available." (onCellEdit)="editDone($event, 'state')">
+				<igx-column field="state" header="State" [width]="'300px'" [editable]="true" [resizable]="true"
+					[sortable]="true" [filterable]="true" [cellStyles]="stateStyles"></igx-column>
+				<igx-column field="priority" header="Priority" [width]="'300px'" [editable]="true" [resizable]="true"
+					[sortable]="true" [filterable]="true" [cellStyles]="stateStyles"></igx-column>
+			</igx-row-island>
+		</igx-row-island>
+	</igx-hierarchical-grid>
+</div>

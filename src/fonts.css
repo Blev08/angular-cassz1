@@ -1,0 +1,36 @@
+@font-face
+{
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'),
+       local('MaterialIcons-Regular'),
+       url(material-design-icons/iconfont/MaterialIcons-Regular.woff2) format('woff2'),
+       url(material-design-icons/iconfont/MaterialIcons-Regular.woff) format('woff');
+}
+
+.material-icons{
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: anti-aliased;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature: 'liga';
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/*url(assets/fonts/material/MaterialIcons-Regular.woff2) format('woff2'),
+url(assets/fonts/material/MaterialIcons-Regular.woff2) format('woff')
+
+These files would needs to be downloaded and added to the assets file
+bootstrap.min.css would go on the same level as styles.scss
+*/

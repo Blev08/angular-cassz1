@@ -1,0 +1,48 @@
+<div>
+	<igx-grid #gridView igxForOf [data]="data" [autoGenerate]="false" [rowSelection]="'multiple'"
+		[primaryKey]="'_id'" [allowFiltering]="true" [filterMode]="'excelStyleFilter'"
+		emptyGridMessage="No Objects Available." (onCellEdit)="editDone($event, 'object')" [displayDensity]="'cosy'">
+    <ng-container *ngFor="let c of columns">
+		<igx-column [field]="c.field" [header]="c.header" [width]="'300px'" [editable]="true" [resizable]="true" [sortable]="true"
+			[filterable]="true" [cellStyles]="objectStyles">
+      </igx-column>
+    </ng-container>
+	</igx-grid>
+	<form *ngIf="reactiveForm" [formGroup]="reactiveForm" id="reactiveForm">
+		<div class="row">
+			<div class="col-md-4">
+				<mat-form-field appearance="outline" floatLabel="always" >
+					<input matInput type="text" id="_id" formControlName="_id" title="Object ID" />
+					<mat-label>Object ID</mat-label>
+				</mat-form-field>
+			</div>
+			<div class="col-md-4">
+				<mat-form-field appearance="outline" floatLabel="always" >
+					<input matInput type="text" id="name" formControlName="name" title="Name" />
+					<mat-label>Name</mat-label>
+				</mat-form-field>
+			</div>
+			<div class="col-md-4">
+				<mat-form-field appearance="outline" floatLabel="always" >
+					<input matInput type="number" id="numberField" formControlName="numberField" title="Number Field" />
+					<mat-label>Number Field</mat-label>
+					<mat-error>Number must be divisible by 8</mat-error>
+				</mat-form-field>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<mat-form-field appearance="outline" floatLabel="always" >
+					<input matInput type="text" id="description" formControlName="description" title="Description" />
+					<mat-label>Description</mat-label>
+				</mat-form-field>
+			</div>
+			<div class="col-md-6">
+				<mat-form-field appearance="outline" floatLabel="always" >
+					<input matInput type="text" id="idea" formControlName="idea" title="Idea" />
+					<mat-label>Idea</mat-label>
+				</mat-form-field>
+			</div>
+		</div>
+	</form>
+</div>
